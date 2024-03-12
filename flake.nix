@@ -55,11 +55,13 @@
           env.GREET = "devenv for the simple handshake";
           packages = with pkgs; [
             git
+            solana-validator
           ];
           enterShell = ''
             git --version
             rustc --version
             cargo --version
+            solana --version
           '';
           languages = {
             rust.enable = true;

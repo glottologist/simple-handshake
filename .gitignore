@@ -22,3 +22,11 @@ Cargo.lock
 
 result
 
+
+### Solana
+
+test-ledger
+
+### Git
+
+.pre-commit-config.yaml
