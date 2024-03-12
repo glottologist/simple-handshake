@@ -1,13 +1,21 @@
 mod cli;
 use clap::Parser;
+use cli::{Cli, Command};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let handshake = cli::Args::parse();
+    let handshake = Cli::parse();
 
     match handshake.command {
-        cli::Command::Connect { node } => {
-            println!("Connecting to {}", node);
+        Command::ConnectRpc(node) => {
+            println!("Connecting to RPC {}:{}", node.host, node.port.to_string());
+        }
+        Command::ConnectGossip(node) => {
+            println!(
+                "Connecting to Gossip {}:{}",
+                node.host,
+                node.port.to_string()
+            );
         }
     }
 
