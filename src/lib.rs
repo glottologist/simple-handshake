@@ -1,2 +1,2 @@
-// Solana client
+// Solana handshake implementations
 pub mod solana;

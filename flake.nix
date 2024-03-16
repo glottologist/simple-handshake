@@ -73,7 +73,6 @@
             commitizen.enable = true;
             cargo-check.enable = true;
             clippy.enable = true;
-            rustfmt.enable = true;
           };
         };
       };
